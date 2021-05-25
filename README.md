@@ -31,12 +31,14 @@ const event = new MouseEvent('mouseover', {
 })
 setInterval(function() {
     document.getElementsByClassName('_6q-tv')[1].dispatchEvent(event)
-    if ($('button.sqdOP.L3NKy._4pI4F.y3zKF')[1].innerHTML !== "Follow") {
-        $('.coreSpriteRightPaginationArrow')[0].click()
-        return
-    }
-    document.querySelectorAll('button.sqdOP.L3NKy._4pI4F.y3zKF')[1].click()
     setTimeout(function() {
-        $('.coreSpriteRightPaginationArrow')[0].click()
-    }, 2500)
+        if ($('button.sqdOP.L3NKy._4pI4F.y3zKF')[1].innerHTML !== "Follow") {
+            $('.coreSpriteRightPaginationArrow')[0].click()
+            return
+        }
+        $('button.sqdOP.L3NKy._4pI4F.y3zKF')[1].click()
+        setTimeout(function() {
+            $('.coreSpriteRightPaginationArrow')[0].click()
+        }, 1500)
+    }, 1000)
 }, 6000)
