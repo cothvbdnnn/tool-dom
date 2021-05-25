@@ -24,12 +24,12 @@ setInterval(function() {
 $ = function(className) {
     return document.querySelectorAll(className)
 }
+const event = new MouseEvent('mouseover', {
+    'view': window,
+    'bubbles': true,
+    'cancelable': true
+})
 setInterval(function() {
-    var event = new MouseEvent('mouseover', {
-        'view': window,
-        'bubbles': true,
-        'cancelable': true
-    });
     document.getElementsByClassName('_6q-tv')[1].dispatchEvent(event)
     if ($('button.sqdOP.L3NKy._4pI4F.y3zKF')[1].innerHTML !== "Follow") {
         $('.coreSpriteRightPaginationArrow')[0].click()
