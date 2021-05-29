@@ -14,8 +14,8 @@ setInterval(function() {
     $('.QBdPU')[1].click()
     setTimeout(function() {
         $('.coreSpriteRightPaginationArrow')[0].click()
-    }, 2500)
-}, 6000)
+    }, 5000)
+}, 10000)
 
 # Like and comment
 
