@@ -1,6 +1,4 @@
-# Tool Instagram
-
-# Like
+// Like
 
 $ = function(className) {
     return document.querySelectorAll(className)
@@ -17,7 +15,7 @@ setInterval(function() {
     }, 5000)
 }, 10000)
 
-# Like and comment
+// Like & comment
 
 $ = function(className) {
     return document.querySelectorAll(className)
@@ -37,7 +35,7 @@ setInterval(function() {
     }, 2500)
 }, 6000)
 
-# Follow
+// Follow
 
 $ = function(className) {
     return document.querySelectorAll(className)
