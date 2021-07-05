@@ -28,19 +28,28 @@ $ = function(className) {
     return document.querySelectorAll(className)
 }
 let loop = setInterval(function() {
-    if (!$('.coreSpriteRightPaginationArrow')[0]) return
-    if (["Unlike", "Bỏ thích"].includes($('.QBdPU')[1].getElementsByTagName('svg')[0].getAttribute("aria-label"))){
-        $('.coreSpriteRightPaginationArrow')[0].click()
+    const btnLike = $('.QBdPU')[1]
+    const btnNext = $('.coreSpriteRightPaginationArrow')[0]
+    const textLike = btnLike.getElementsByTagName('svg')[0].getAttribute("aria-label")
+    const iconBox = $('.X7cDz')[0].getElementsByClassName('wpO6b')[0]
+    const btnSubmit = $("button[type=submit]")[0]
+    if (!btnLike) {
+        btnNext.click()
         return
     }
-    $('.QBdPU')[1].click()
-    $('.X7cDz')[0].getElementsByClassName('wpO6b')[0].click()
-    $('.CIwC8')[~~(Math.random() * 13)].click()
-    $("button[type=submit]")[0].click()
+    if (["Unlike", "Bỏ thích"].includes(textLike)) {
+        btnNext.click()
+        return
+    }
+    btnLike.click()
+    iconBox.click()
+    const arrayIcons = $('.CIwC8')
+    arrayIcons[~~(Math.random() * 13)].click()
+    btnSubmit.click()
     setTimeout(function() {
-        $('.coreSpriteRightPaginationArrow')[0].click()
-    }, 2500)
-}, 6000)
+        btnNext.click()
+    }, 4000)
+}, 8000)
 
 // Follow
 
