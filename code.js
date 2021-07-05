@@ -3,24 +3,31 @@
 $ = function(className) {
     return document.querySelectorAll(className)
 }
-setInterval(function() {
-    if (!$('.coreSpriteRightPaginationArrow')[0]) return
-    if (["Unlike", "Bỏ thích"].includes($('.QBdPU')[1].getElementsByTagName('svg')[0].getAttribute("aria-label"))) {
-        $('.coreSpriteRightPaginationArrow')[0].click()
+
+let loop = setInterval(function() {
+    const btnLike = $('.QBdPU')[1]
+    const btnNext = $('.coreSpriteRightPaginationArrow')[0]
+    const textLike = btnLike.getElementsByTagName('svg')[0].getAttribute("aria-label")
+    if (!btnLike) {
+        btnNext.click()
         return
     }
-    $('.QBdPU')[1].click()
+    if (["Unlike", "Bỏ thích"].includes(textLike)) {
+        btnNext.click()
+        return
+    }
+    btnLike.click()
     setTimeout(function() {
-        $('.coreSpriteRightPaginationArrow')[0].click()
-    }, 5000)
-}, 10000)
+        btnNext.click()
+    }, 4000)
+}, 8000)
 
 // Like & comment
 
 $ = function(className) {
     return document.querySelectorAll(className)
 }
-setInterval(function() {
+let loop = setInterval(function() {
     if (!$('.coreSpriteRightPaginationArrow')[0]) return
     if (["Unlike", "Bỏ thích"].includes($('.QBdPU')[1].getElementsByTagName('svg')[0].getAttribute("aria-label"))){
         $('.coreSpriteRightPaginationArrow')[0].click()
