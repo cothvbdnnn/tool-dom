@@ -56,22 +56,24 @@ let loop = setInterval(function() {
 $ = function(className) {
     return document.querySelectorAll(className)
 }
-const event = new MouseEvent('mouseover', {
+const eventHover = new MouseEvent('mouseover', {
     'view': window,
     'bubbles': true,
     'cancelable': true
 })
 setInterval(function() {
-    if (!$('.coreSpriteRightPaginationArrow')[0]) return
-    document.getElementsByClassName('_6q-tv')[1].dispatchEvent(event)
+    const btnNext = $('.coreSpriteRightPaginationArrow')[0]
+    const btnFollow = $('button.sqdOP.L3NKy._4pI4F.y3zKF')[1]
+    if (!btnNext) return
+    $('._6q-tv')[1].dispatchEvent(eventHover)
     setTimeout(function() {
-        if ($('button.sqdOP.L3NKy._4pI4F.y3zKF')[1].innerHTML !== "Follow") {
-            $('.coreSpriteRightPaginationArrow')[0].click()
+        if (btnFollow.innerHTML !== "Follow") {
+            btnNext.click()
             return
         }
-        $('button.sqdOP.L3NKy._4pI4F.y3zKF')[1].click()
+        btnFollow.click()
         setTimeout(function() {
-            $('.coreSpriteRightPaginationArrow')[0].click()
+            btnNext.click()
         }, 1500)
     }, 1000)
 }, 6000)
