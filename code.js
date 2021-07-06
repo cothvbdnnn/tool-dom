@@ -61,7 +61,7 @@ const eventHover = new MouseEvent('mouseover', {
     'bubbles': true,
     'cancelable': true
 })
-setInterval(function() {
+let loop = setInterval(function() {
     const btnNext = $('.coreSpriteRightPaginationArrow')[0]
     const btnFollow = $('button.sqdOP.L3NKy._4pI4F.y3zKF')[1]
     if (!btnNext) return
