@@ -59,7 +59,7 @@ let loop = setInterval(function() {
     $('._6q-tv')[1].dispatchEvent(eventHover)
     setTimeout(function() {
         const btnFollow = $('button.sqdOP.L3NKy._4pI4F.y3zKF')[1]
-        if (!["Follow", "Theo dõi"].includes(btnFollow.innerHTML)) {
+        if (!btnFollow || !["Follow", "Theo dõi"].includes(btnFollow.innerHTML)) {
             btnNext.click()
             return
         }
