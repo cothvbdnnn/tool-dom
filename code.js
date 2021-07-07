@@ -8,11 +8,7 @@ let loop = setInterval(function() {
     const btnLike = $('.QBdPU')[1]
     const btnNext = $('.coreSpriteRightPaginationArrow')[0]
     const textLike = btnLike.getElementsByTagName('svg')[0].getAttribute("aria-label")
-    if (!btnLike) {
-        btnNext.click()
-        return
-    }
-    if (["Unlike", "Bỏ thích"].includes(textLike)) {
+    if (!btnLike || ["Unlike", "Bỏ thích"].includes(textLike)) {
         btnNext.click()
         return
     }
@@ -33,11 +29,7 @@ let loop = setInterval(function() {
     const textLike = btnLike.getElementsByTagName('svg')[0].getAttribute("aria-label")
     const iconBox = $('.X7cDz')[0].getElementsByClassName('wpO6b')[0]
     const btnSubmit = $("button[type=submit]")[0]
-    if (!btnLike) {
-        btnNext.click()
-        return
-    }
-    if (["Unlike", "Bỏ thích"].includes(textLike)) {
+    if (!btnLike || ["Unlike", "Bỏ thích"].includes(textLike)) {
         btnNext.click()
         return
     }
