@@ -7,7 +7,7 @@ $ = function(className) {
 let loop = setInterval(function() {
     const btnLike = $('.QBdPU')[1]
     const btnNext = $('.coreSpriteRightPaginationArrow')[0]
-    const textLike = btnLike.getElementsByTagName('svg')[0].getAttribute("aria-label")
+    const textLike = btnLike?.getElementsByTagName('svg')[0].getAttribute("aria-label")
     if (!btnLike || ["Unlike", "Bỏ thích"].includes(textLike)) {
         btnNext.click()
         return
@@ -26,7 +26,7 @@ $ = function(className) {
 let loop = setInterval(function() {
     const btnLike = $('.QBdPU')[1]
     const btnNext = $('.coreSpriteRightPaginationArrow')[0]
-    const textLike = btnLike.getElementsByTagName('svg')[0].getAttribute("aria-label")
+    const textLike = btnLike?.getElementsByTagName('svg')[0].getAttribute("aria-label")
     if (!btnLike || ["Unlike", "Bỏ thích"].includes(textLike)) {
         btnNext.click()
         return
@@ -59,7 +59,7 @@ let loop = setInterval(function() {
     $('._6q-tv')[1].dispatchEvent(eventHover)
     setTimeout(function() {
         const btnFollow = $('button.sqdOP.L3NKy._4pI4F.y3zKF')[1]
-        if (btnFollow.innerHTML !== "Follow") {
+        if (!["Follow", "Theo dõi"].includes(btnFollow.innerHTML)) {
             btnNext.click()
             return
         }
