@@ -3,7 +3,6 @@
 $ = function(className) {
     return document.querySelectorAll(className)
 }
-
 let loop = setInterval(function() {
     const btnLike = $('.QBdPU')[1]
     const btnNext = $('.coreSpriteRightPaginationArrow')[0]
