@@ -8,7 +8,7 @@ let loop = setInterval(function() {
     const btnNext = $('.coreSpriteRightPaginationArrow')[0]
     const textLike = btnLike?.getElementsByTagName('svg')[0].getAttribute("aria-label")
     if (!btnLike || ["Unlike", "Bỏ thích"].includes(textLike)) {
-        btnNext.click()
+        btnNext && btnNext.click()
         return
     }
     btnLike.click()
@@ -27,7 +27,7 @@ let loop = setInterval(function() {
     const btnNext = $('.coreSpriteRightPaginationArrow')[0]
     const textLike = btnLike?.getElementsByTagName('svg')[0].getAttribute("aria-label")
     if (!btnLike || ["Unlike", "Bỏ thích"].includes(textLike)) {
-        btnNext.click()
+        btnNext && btnNext.click()
         return
     }
     btnLike.click()
@@ -59,7 +59,7 @@ let loop = setInterval(function() {
     setTimeout(function() {
         const btnFollow = $('button.sqdOP.L3NKy._4pI4F.y3zKF')[1]
         if (!btnFollow || !["Follow", "Theo dõi"].includes(btnFollow.innerHTML)) {
-            btnNext.click()
+            btnNext && btnNext.click()
             return
         }
         btnFollow.click()
