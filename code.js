@@ -1,4 +1,4 @@
-// Like
+// L
 
 $ = function(className) {
     return document.querySelectorAll(className)
@@ -17,7 +17,7 @@ let loop = setInterval(function() {
     }, 4000)
 }, 8000)
 
-// Like & comment
+// C
 
 $ = function(className) {
     return document.querySelectorAll(className)
@@ -42,7 +42,7 @@ let loop = setInterval(function() {
     }, 4000)
 }, 8000)
 
-// Follow
+// F
 
 $ = function(className) {
     return document.querySelectorAll(className)
