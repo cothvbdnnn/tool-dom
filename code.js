@@ -4,8 +4,8 @@ $ = function(className) {
     return document.querySelectorAll(className)
 }
 let loop = setInterval(function() {
-    const btnLike = $('.QBdPU')[1]
-    const btnNext = $('.coreSpriteRightPaginationArrow')[0]
+    const btnLike = $('.QBdPU')[5]
+    const btnNext = $('.QBdPU')[2]
     const textLike = btnLike?.getElementsByTagName('svg')[0].getAttribute("aria-label")
     if (!btnLike || ["Unlike", "Bỏ thích"].includes(textLike)) {
         btnNext && btnNext.click()
@@ -23,8 +23,8 @@ $ = function(className) {
     return document.querySelectorAll(className)
 }
 let loop = setInterval(function() {
-    const btnLike = $('.QBdPU')[1]
-    const btnNext = $('.coreSpriteRightPaginationArrow')[0]
+    const btnLike = $('.QBdPU')[5]
+    const btnNext = $('.QBdPU')[2]
     const textLike = btnLike?.getElementsByTagName('svg')[0].getAttribute("aria-label")
     if (!btnLike || ["Unlike", "Bỏ thích"].includes(textLike)) {
         btnNext && btnNext.click()
@@ -53,7 +53,7 @@ const eventHover = new MouseEvent('mouseover', {
     'cancelable': true
 })
 let loop = setInterval(function() {
-    const btnNext = $('.coreSpriteRightPaginationArrow')[0]
+    const btnNext = $('.QBdPU')[2]
     if (!btnNext) return
     $('._6q-tv')[1].dispatchEvent(eventHover)
     setTimeout(function() {
